@@ -1,7 +1,13 @@
+using BulkyWeb.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<AppDbContext>(options=> 
+options.UseNpgsql(builder.Configuration.GetConnectionString("conn"))); //This for establish a connection with Postgresql 
+// You have to change the above line in order to establish a connection with Mysql SSMS also you have to change the conn in appsettings.json
 
 var app = builder.Build();
 
