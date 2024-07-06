@@ -11,14 +11,15 @@
             <div asp-validation-summary="ModelOnly"></div>
 
         </div>
-        <div class="mb-3 row">
-            <label asp-for="Name" class="p-0">Category Name</label>
-            <input asp-for="Name" class="form-control" />
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Name" class="form-control border-0 shadow" />
+            <label asp-for="Name" class="ms-2">Category Name</label>
+
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
-        <div class="mb-3 row">
-            <label asp-for="DisplayOrder" class="p-0">Display Order</label>
-            <input asp-for="DisplayOrder" class="form-control" />
+        <div class="form-floating py-2 col-12">
+            <input asp-for="DisplayOrder" class="form-control border-0 shadow" />
+            <label asp-for="DisplayOrder" class="ms-2">Display Order</label>
             <span asp-validation-for="DisplayOrder" class="text-danger"></span>
 
         </div>
